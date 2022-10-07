@@ -1,0 +1,31 @@
+extends ./layout/index.pug
+block compartirContenido 
+    div
+    section.py-5.text-center.container
+        .row.py-lg-5
+        .col-lg-6.col-md-8.mx-auto
+            h1.fw-light Hoteles Zacatlan Puebla
+            p.lead.text-muted
+            | Las Mejores instancias para pasar las mejores vacaciones. 
+            p
+            a.btn.btn-secondary.my-2(href='#') Anadir Gerente 
+
+    div
+    .album.py-5.bg-light
+        .container
+        .row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3
+            each habitacion in habitaciones 
+                .col
+                    .card.shadow-sm
+                        img.card-img-top(src=`#`)
+                        .card-body
+                            p.card-text
+                            | #{habitacion.nombre + " " }
+                            | 
+                            .d-flex.justify-content-between.align-items-center
+                                .btn-group
+                                    a.btn.btn-sm.btn-outline-secondary(href='#') Ver
+                                    a.btn.btn-sm.btn-outline-secondary(href='#') Editar
+                                small.text-muted
+                                    |                
+            
